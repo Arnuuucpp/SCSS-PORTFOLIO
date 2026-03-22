@@ -1,0 +1,209 @@
+@font-face {
+  font-family: customfont;
+  src: url(./CuturilaDEMO-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 70px 0.5fr 0.5fr 50px;
+  grid-template-areas: "nav nav" "left-up figure" "left-up figure" "footer figure";
+  background-color: transparent;
+  background-image: url("doodles_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+main #nav {
+  grid-area: nav;
+}
+main #left-up {
+  grid-area: left-up;
+  padding: 40px;
+  gap: 30px;
+}
+main footer {
+  grid-area: footer;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+main figure {
+  grid-area: figure;
+}
+main a {
+  text-decoration: none;
+  color: black;
+}
+
+#nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+ul {
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background-color: whitesmoke;
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+ul li {
+  padding: 5px 10px;
+  border-radius: 34px;
+  cursor: pointer;
+}
+
+ul li:hover {
+  background-color: black;
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transition: all 0.3s ease-in-out;
+}
+
+figure img {
+  width: 100%;
+  height: 99%;
+}
+
+#left-up button {
+  font-weight: 500;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(228, 223, 223);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#left-up button:hover {
+  background-color: black;
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+#left-up .btn2 {
+  margin-left: 10px;
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+}
+#left-up h1 {
+  display: inline-block;
+  font-size: 80px;
+  margin-top: 20px;
+  font-family: "Inter", sans-serif;
+  line-height: 1;
+}
+#left-up h1 span {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  text-shadow: 2px 2px 0px rgba(22, 22, 22, 0.356);
+}
+#left-up h2 {
+  font-size: 55px;
+  font-weight: 400;
+  font-family: customfont;
+  color: #4a4a4a;
+}
+#left-up p {
+  margin-top: 10px;
+  color: #555555;
+  max-width: 490px;
+}
+#left-up .spn {
+  font-size: 15px;
+  gap: 10px;
+  font-weight: 300;
+  color: #888888;
+}
+#left-up .spn i {
+  color: #000000;
+}
+#left-up .btn {
+  margin-top: 15px;
+}
+
+footer h6 {
+  cursor: pointer;
+}
+footer a {
+  text-decoration: none;
+  color: black;
+}
+footer i {
+  cursor: pointer;
+}
+footer i:hover {
+  color: rgb(70, 61, 61);
+  transition: all 0.3s ease-in-out;
+}
+
+.status-btn {
+  font-weight: 500;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(228, 223, 223);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.status-btn:hover {
+  background-color: black;
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.status-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.status-btn::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 rgba(34, 197, 94, 0.4);
+  animation: pulse 2s infinite;
+}
+
+.status-btn:hover::before {
+  background-color: #00ff5e;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}/*# sourceMappingURL=style.css.map */
